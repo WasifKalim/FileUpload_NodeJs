@@ -3,7 +3,11 @@
 exports.localFileUpload =async(req,res)=>{
     try {
         const file = req.files.file;
-        let path = __dirname + "/uploads/" +  Date.now() + `${file.name.split(".")[1]}`;
+        console.log(file);
+        
+        let path = __dirname + "/uploads/" +  Date.now() + `.${file.name.split(".")[1]}`;
+        console.log(path);
+        
         file.mv(path, (e)=>{
             console.log(e);
         });

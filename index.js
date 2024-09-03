@@ -15,13 +15,13 @@ app.use(fileupload());
 
 
 // db connect
-const db = require("./config/db");
-db.connect();
+// const db = require("./config/db");
+// db.connect();
 
 
 // cloud connect
-const cloudinary = require("./config/cloudinary");
-cloudinary.cloudinaryConnect();
+// const cloudinary = require("./config/cloudinary");
+// cloudinary.cloudinaryConnect();
 
 app.get('/',(req, res)=>{
     res.send("Working Route")

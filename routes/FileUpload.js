@@ -1,9 +1,10 @@
 const express = require("express");
-const { localFileUpload } = require("../controller/fileUpload");
 const router = express.Router();
+const { localFileUpload } = require("../controller/fileUpload");
+
 
 
 
 router.post("/localFileUpload", localFileUpload);
 
-module.express = router;
+module.exports= router;
