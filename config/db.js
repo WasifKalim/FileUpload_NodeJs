@@ -1,10 +1,9 @@
 const mongoose = require('mongoose');
 
 require('dotenv').config();
-
+let url = process.env.MONGODB_URL;
 exports.connect = () => {
-    mongoose.connect("mongodb+srv://wasif114222:81err3oqWIF4J44e@cluster0.p1utm.mongodb.net/fileupload", {
-    })
+    mongoose.connect(url)
     .then(console.log("DB Connected"))
     .catch((e)=>{
         console.log(e);
